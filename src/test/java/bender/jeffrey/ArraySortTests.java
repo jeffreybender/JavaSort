@@ -113,7 +113,7 @@ public class ArraySortTests {
 
     @Test
     public void isSortedOnSortedComparatorTest() {
-        Arrays.sort(comparableArray);
+        Arrays.sort(comparableArray, stringLengthCompare);
         assertTrue(ArraySortUtils.isSorted(comparableArray, stringLengthCompare));
     }
 }
