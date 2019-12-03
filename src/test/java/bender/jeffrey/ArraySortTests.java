@@ -19,12 +19,14 @@ public class ArraySortTests {
 
     private String[] comparableArray;
     private IncomparableClass[] incomparableArray;
-    private Comparator<String> stringLengthCompare;
-    private Comparator<IncomparableClass> incomperableClassCompare;
+    private final Comparator<String> stringLengthCompare;
+    private final Comparator<IncomparableClass> incomperableClassCompare;
+    private final Comparator<String> allowNull;
 
     public ArraySortTests() {
         stringLengthCompare = Comparator.comparing(String::length);
         incomperableClassCompare = Comparator.comparing(IncomparableClass::getRank);
+        allowNull = (s1, s2) -> 0;
     }
 
     @BeforeAll
@@ -115,5 +117,23 @@ public class ArraySortTests {
     public void isSortedOnSortedComparatorTest() {
         Arrays.sort(comparableArray, stringLengthCompare);
         assertTrue(ArraySortUtils.isSorted(comparableArray, stringLengthCompare));
+    }
+
+    @Test
+    public void isSortedNullElementsTest() {
+        String[] nullArray = new String[] {
+            null,
+            null,
+            null,
+            null
+        };
+        Arrays.sort(nullArray, allowNull);
+        assertTrue(ArraySortUtils.isSorted(nullArray, allowNull));
+        assertThrows(NullPointerException.class, () -> ArraySortUtils.isSorted(nullArray));
+    }
+
+    @Test
+    public void isSortedIncomparableClassTest() {
+        assertThrows(ClassCastException.class, () -> ArraySortUtils.isSorted(incomparableArray, null));
     }
 }

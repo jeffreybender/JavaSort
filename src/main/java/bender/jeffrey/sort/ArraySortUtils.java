@@ -22,7 +22,7 @@ public class ArraySortUtils {
                 if(array[0] != null && array[0] instanceof Comparable) {
                     return isSorted((Comparable[]) array);
                 } else {
-                    throw new ClassCastException();
+                    throw new ClassCastException((array[0] != null ? array[0].getClass().getCanonicalName() : "null") + " cannot be cast to type " + Comparable.class.getCanonicalName());
                 }
             }
         }
@@ -40,14 +40,5 @@ public class ArraySortUtils {
             }
         }
         return true;
-    }
-
-    private static <T> int compare(T o1, T o2, Comparator<T> comparator) {
-        if (comparator != null) {
-            return comparator.compare(o1, o2);
-        } else if (o1 instanceof Comparable) {
-            return ((Comparable) o1).compareTo(o2);
-        }
-        throw new ClassCastException();
     }
 }
