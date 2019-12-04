@@ -3,13 +3,20 @@ package bender.jeffrey.sort.util;
 import java.util.Comparator;
 
 /**
- *
+ * Utility class for array sorting. Class cannot be instantiated.
+ * 
  * @author jbender
+ * @version 1.0
  */
-public class ArraySortUtils {
+public final class ArraySortUtils {
 
     /**
-     * 
+     * {@code private} default constructor to prevent class from being instantiated.
+     */
+    private ArraySortUtils() {
+    }
+
+    /**
      * Checks if an array is sorted. Will return {@code true} if:
      * <ul>
      * <li>{@code array} has a {@code length} of 0 - 1.</li>
@@ -48,7 +55,6 @@ public class ArraySortUtils {
     }
 
     /**
-     * 
      * Checks if an array is sorted. Will return true if:
      * <ul>
      * <li>{@code array} has a {@code length} of 0 - 1.</li>
