@@ -1,4 +1,4 @@
-package bender.jeffrey.sort;
+package bender.jeffrey.sort.util;
 
 import java.util.Comparator;
 
