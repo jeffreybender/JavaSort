@@ -54,3 +54,4 @@ nbdist/
 .classpath
 .project
 .settings/
+.vscode/
