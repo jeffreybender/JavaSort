@@ -22,7 +22,7 @@ public class ArraySortUtils {
      * @param array The array to check if it is sorted
      * @param comparator The comparator to be used to compare objects in the array to determine order.
      * @return {@code true} if the array is sorted. {@code false} if the array is not sorted.
-     * @throws ClassCastException if the {@code comparator} is null and the class for {@code <T>} does not implement {@link java.lang.Comparable}
+     * @throws ClassCastException if {@code comparator} is null and the class for {@code <T>} does not implement {@link java.lang.Comparable}
      */
     public static <T> boolean isSorted(T[] array, Comparator<? super T> comparator) {
         if (array.length > 1) {
