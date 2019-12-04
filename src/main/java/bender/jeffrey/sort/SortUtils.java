@@ -41,7 +41,7 @@ public final class SortUtils {
     public static <T> boolean isSorted(T[] array, Comparator<? super T> comparator) {
         if (array.length > 1) {
             if (comparator == null) {
-                comparator = (o1, o2) -> ((Comparable) o1).compareTo(o2);
+                comparator = getDefaultComparator();
             }
             for (int i = 1; i < array.length; i++) {
                 T o1 = array[i - 1];
@@ -70,5 +70,15 @@ public final class SortUtils {
      */
     public static <T extends Comparable<? super T>> boolean isSorted(T[] array) {
         return isSorted(array, null);
+    }
+
+    public static <T> Comparator<T> getDefaultComparator() {
+        return (o1, o2) -> ((Comparable) o1).compareTo(o2);
+    }
+
+    public static <T> void swap(T[] array, int index1, int index2) {
+        T temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 }

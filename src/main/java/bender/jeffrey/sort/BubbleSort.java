@@ -30,8 +30,25 @@ public final class BubbleSort {
      *                            class for {@code <T>} does not implement
      *                            {@link java.lang.Comparable}.
      */
-    public static <T> void bubbleSort(T[] array, Comparator<? super T> comparator) {
-
+    public static <T> void sort(T[] array, Comparator<? super T> comparator) {
+        if(array.length <= 1) {
+            return;
+        }
+        if(comparator == null) {
+            comparator = SortUtils.getDefaultComparator();
+        }
+        boolean didSwap;
+        do {
+            didSwap = false;
+            for(int i = 1; i < array.length; i++) {
+                T o1 = array[i - 1];
+                T o2 = array[i];
+                if(comparator.compare(o1, o2) > 0) {
+                    SortUtils.swap(array, i - 1, i);
+                    didSwap = true;
+                }
+            }
+        } while(didSwap);
     }
 
     /**
@@ -44,6 +61,6 @@ public final class BubbleSort {
      * @param array The array to be sorted.
      */
     public static <T extends Comparable<? super T>> void bubbleSort(T[] array) {
-        bubbleSort(array, null);
+        sort(array, null);
     }
 }
