@@ -39,34 +39,12 @@ public class ArraySortUtilsTests {
 
     @BeforeEach
     public void setUp() throws Exception {
-        comparableArray = new String[]{
-            "WE",
-            "HOLD",
-            "THESE",
-            "TRUTHS",
-            "TO",
-            "BE",
-            "SELF",
-            "EVIDENT",
-            "THAT",
-            "ALL",
-            "MEN",
-            "ARE",
-            "CREATED",
-            "EQUAL"
-        };
-        incomparableArray = new IncomparableClass[]{
-            new IncomparableClass(2),
-            new IncomparableClass(0),
-            new IncomparableClass(2),
-            new IncomparableClass(4),
-            new IncomparableClass(5),
-            new IncomparableClass(6),
-            new IncomparableClass(1),
-            new IncomparableClass(1),
-            new IncomparableClass(1),
-            new IncomparableClass(1)
-        };
+        comparableArray = new String[] { "WE", "HOLD", "THESE", "TRUTHS", "TO", "BE", "SELF", "EVIDENT", "THAT", "ALL",
+                "MEN", "ARE", "CREATED", "EQUAL" };
+        incomparableArray = new IncomparableClass[] { new IncomparableClass(2), new IncomparableClass(0),
+                new IncomparableClass(2), new IncomparableClass(4), new IncomparableClass(5), new IncomparableClass(6),
+                new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1),
+                new IncomparableClass(1) };
     }
 
     @AfterEach
@@ -75,8 +53,8 @@ public class ArraySortUtilsTests {
 
     @Test
     public void isSortedEmptyList() {
-        String[] emptyString = new String[]{};
-        IncomparableClass[] emptyIncomperable = new IncomparableClass[]{};
+        String[] emptyString = new String[] {};
+        IncomparableClass[] emptyIncomperable = new IncomparableClass[] {};
         assertTrue(ArraySortUtils.isSorted(emptyString, null));
         assertTrue(ArraySortUtils.isSorted(emptyString, stringLengthCompare));
         assertTrue(ArraySortUtils.isSorted(emptyIncomperable, null));
@@ -85,12 +63,8 @@ public class ArraySortUtilsTests {
 
     @Test
     public void isSortedSingleElementList() {
-        String[] singleString = new String[]{
-            "Hello World!"
-        };
-        IncomparableClass[] singleIncomperable = new IncomparableClass[]{
-            new IncomparableClass(0)
-        };
+        String[] singleString = new String[] { "Hello World!" };
+        IncomparableClass[] singleIncomperable = new IncomparableClass[] { new IncomparableClass(0) };
         assertTrue(ArraySortUtils.isSorted(singleString, null));
         assertTrue(ArraySortUtils.isSorted(singleString, stringLengthCompare));
         assertTrue(ArraySortUtils.isSorted(singleIncomperable, null));
@@ -121,12 +95,7 @@ public class ArraySortUtilsTests {
 
     @Test
     public void isSortedNullElementsTest() {
-        String[] nullArray = new String[] {
-            null,
-            null,
-            null,
-            null
-        };
+        String[] nullArray = new String[] { null, null, null, null };
         Arrays.sort(nullArray, allowNull);
         assertTrue(ArraySortUtils.isSorted(nullArray, allowNull));
         assertThrows(NullPointerException.class, () -> ArraySortUtils.isSorted(nullArray));
