@@ -1,4 +1,4 @@
-package bender.jeffrey.sort.util;
+package bender.jeffrey.sort;
 
 import java.util.Comparator;
 
@@ -8,12 +8,12 @@ import java.util.Comparator;
  * @author jbender
  * @version 1.0
  */
-public final class ArraySortUtils {
+public final class SortUtils {
 
     /**
      * {@code private} default constructor to prevent class from being instantiated.
      */
-    private ArraySortUtils() {
+    private SortUtils() {
     }
 
     /**

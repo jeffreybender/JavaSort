@@ -1,7 +1,7 @@
 package bender.jeffrey;
 
 import bender.jeffrey.sample.IncomparableClass;
-import bender.jeffrey.sort.util.ArraySortUtils;
+import bender.jeffrey.sort.SortUtils;
 import java.util.Arrays;
 import java.util.Comparator;
 import org.junit.jupiter.api.AfterEach;
@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author jbender
  */
-public class ArraySortUtilsTests {
+public class SortUtilsTests {
 
     private String[] comparableArray;
     private IncomparableClass[] incomparableArray;
@@ -23,7 +23,7 @@ public class ArraySortUtilsTests {
     private final Comparator<IncomparableClass> incomperableClassCompare;
     private final Comparator<String> allowNull;
 
-    public ArraySortUtilsTests() {
+    public SortUtilsTests() {
         stringLengthCompare = Comparator.comparing(String::length);
         incomperableClassCompare = Comparator.comparing(IncomparableClass::getRank);
         allowNull = (s1, s2) -> 0;
@@ -55,54 +55,54 @@ public class ArraySortUtilsTests {
     public void isSortedEmptyList() {
         String[] emptyString = new String[] {};
         IncomparableClass[] emptyIncomperable = new IncomparableClass[] {};
-        assertTrue(ArraySortUtils.isSorted(emptyString, null));
-        assertTrue(ArraySortUtils.isSorted(emptyString, stringLengthCompare));
-        assertTrue(ArraySortUtils.isSorted(emptyIncomperable, null));
-        assertTrue(ArraySortUtils.isSorted(emptyIncomperable, incomperableClassCompare));
+        assertTrue(SortUtils.isSorted(emptyString, null));
+        assertTrue(SortUtils.isSorted(emptyString, stringLengthCompare));
+        assertTrue(SortUtils.isSorted(emptyIncomperable, null));
+        assertTrue(SortUtils.isSorted(emptyIncomperable, incomperableClassCompare));
     }
 
     @Test
     public void isSortedSingleElementList() {
         String[] singleString = new String[] { "Hello World!" };
         IncomparableClass[] singleIncomperable = new IncomparableClass[] { new IncomparableClass(0) };
-        assertTrue(ArraySortUtils.isSorted(singleString, null));
-        assertTrue(ArraySortUtils.isSorted(singleString, stringLengthCompare));
-        assertTrue(ArraySortUtils.isSorted(singleIncomperable, null));
-        assertTrue(ArraySortUtils.isSorted(singleIncomperable, incomperableClassCompare));
+        assertTrue(SortUtils.isSorted(singleString, null));
+        assertTrue(SortUtils.isSorted(singleString, stringLengthCompare));
+        assertTrue(SortUtils.isSorted(singleIncomperable, null));
+        assertTrue(SortUtils.isSorted(singleIncomperable, incomperableClassCompare));
     }
 
     @Test
     public void isSortedOnUnsortedComperableTest() {
-        assertFalse(ArraySortUtils.isSorted(comparableArray, null));
+        assertFalse(SortUtils.isSorted(comparableArray, null));
     }
 
     @Test
     public void isSortedOnUnsortedComparatorTest() {
-        assertFalse(ArraySortUtils.isSorted(comparableArray, stringLengthCompare));
+        assertFalse(SortUtils.isSorted(comparableArray, stringLengthCompare));
     }
 
     @Test
     public void isSortedOnSortedComperableTest() {
         Arrays.sort(comparableArray);
-        assertTrue(ArraySortUtils.isSorted(comparableArray, null));
+        assertTrue(SortUtils.isSorted(comparableArray, null));
     }
 
     @Test
     public void isSortedOnSortedComparatorTest() {
         Arrays.sort(comparableArray, stringLengthCompare);
-        assertTrue(ArraySortUtils.isSorted(comparableArray, stringLengthCompare));
+        assertTrue(SortUtils.isSorted(comparableArray, stringLengthCompare));
     }
 
     @Test
     public void isSortedNullElementsTest() {
         String[] nullArray = new String[] { null, null, null, null };
         Arrays.sort(nullArray, allowNull);
-        assertTrue(ArraySortUtils.isSorted(nullArray, allowNull));
-        assertThrows(NullPointerException.class, () -> ArraySortUtils.isSorted(nullArray));
+        assertTrue(SortUtils.isSorted(nullArray, allowNull));
+        assertThrows(NullPointerException.class, () -> SortUtils.isSorted(nullArray));
     }
 
     @Test
     public void isSortedIncomparableClassTest() {
-        assertThrows(ClassCastException.class, () -> ArraySortUtils.isSorted(incomparableArray, null));
+        assertThrows(ClassCastException.class, () -> SortUtils.isSorted(incomparableArray, null));
     }
 }

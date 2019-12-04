@@ -9,12 +9,12 @@ import java.util.Comparator;
  * @author jbender
  * @version 1.0
  */
-public final class ArraySort {
+public final class BubbleSort {
 
     /**
      * {@code private} default constructor to prevent class from being instantiated.
      */
-    private ArraySort() {
+    private BubbleSort() {
     }
 
     /**
