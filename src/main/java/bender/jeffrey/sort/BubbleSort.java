@@ -60,7 +60,7 @@ public final class BubbleSort {
      *              {@link java.lang.Comparable}.
      * @param array The array to be sorted.
      */
-    public static <T extends Comparable<? super T>> void bubbleSort(T[] array) {
+    public static <T extends Comparable<? super T>> void sort(T[] array) {
         sort(array, null);
     }
 }
