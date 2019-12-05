@@ -38,7 +38,7 @@ public final class SortUtils {
      *                            {@code <T>} does not implement
      *                            {@link java.lang.Comparable}
      */
-    public static <T> boolean isSorted(T[] array, Comparator<? super T> comparator) {
+    public static <T> boolean isSorted(final T[] array, Comparator<? super T> comparator) {
         if (array.length > 1) {
             if (comparator == null) {
                 comparator = getDefaultComparator();
@@ -68,7 +68,7 @@ public final class SortUtils {
      * @return {@code true} if the array is sorted. {@code false} if the array is
      *         not sorted.
      */
-    public static <T extends Comparable<? super T>> boolean isSorted(T[] array) {
+    public static <T extends Comparable<? super T>> boolean isSorted(final T[] array) {
         return isSorted(array, null);
     }
 
