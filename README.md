@@ -13,7 +13,7 @@ This is a [Maven](https://maven.apache.org/ "Maven") project.
 
 #### Sorting
 
-To use any of the sorting algorithms from this library in your project you just need to `import` the class for the sorting algorithm you wish to use from the `dev.jeffreybender.sort` package.
+To use any of the sorting algorithms from this library in your project you just need to `import` the class for the sorting algorithm you wish to use from the `dev.jeffreybender.sort` package and use one of the two methods listed below.
 
 All of the sort classes have 2 public methods:
 
