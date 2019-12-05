@@ -38,9 +38,10 @@ public final class BubbleSort {
             comparator = SortUtils.getDefaultComparator();
         }
         boolean didSwap;
+        int endIndex = array.length;
         do {
             didSwap = false;
-            for(int i = 1; i < array.length; i++) {
+            for(int i = 1; i < endIndex; i++) {
                 T o1 = array[i - 1];
                 T o2 = array[i];
                 if(comparator.compare(o1, o2) > 0) {
@@ -48,6 +49,7 @@ public final class BubbleSort {
                     didSwap = true;
                 }
             }
+            endIndex--;
         } while(didSwap);
     }
 
