@@ -1,7 +1,7 @@
-package bender.jeffrey;
+package dev.jeffreybender;
 
-import bender.jeffrey.sample.IncomparableClass;
-import bender.jeffrey.sort.SortUtils;
+import dev.jeffreybender.sample.IncomparableClass;
+import dev.jeffreybender.sort.SortUtils;
 import java.util.Arrays;
 import java.util.Comparator;
 import org.junit.jupiter.api.AfterEach;

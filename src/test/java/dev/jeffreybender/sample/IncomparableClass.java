@@ -1,4 +1,4 @@
-package bender.jeffrey.sample;
+package dev.jeffreybender.sample;
 
 /**
  *

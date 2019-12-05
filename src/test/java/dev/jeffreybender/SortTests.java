@@ -1,4 +1,4 @@
-package bender.jeffrey;
+package dev.jeffreybender;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -7,9 +7,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.api.BeforeAll;
 
-import bender.jeffrey.sample.IncomparableClass;
-import bender.jeffrey.sort.BubbleSort;
-import bender.jeffrey.sort.SortUtils;
+import dev.jeffreybender.sample.IncomparableClass;
+import dev.jeffreybender.sort.BubbleSort;
+import dev.jeffreybender.sort.SortUtils;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
