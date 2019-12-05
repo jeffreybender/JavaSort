@@ -81,7 +81,7 @@ public final class SortUtils {
      *                            {@link java.lang.Comparable}
      */
     public static <T> Comparator<T> getDefaultComparator() {
-        return (o1, o2) -> ((Comparable) o1).compareTo(o2);
+        return (o1, o2) -> ((Comparable<T>) o1).compareTo(o2);
     }
 
     /**
