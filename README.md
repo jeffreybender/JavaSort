@@ -9,9 +9,9 @@ The sorting algorithms can all be found in: [/src/main/java/dev/jeffreybender/so
 
 ------------
 
-###How to use this library
+### How to use this library
 
-####Sorting
+#### Sorting
 
 To use any of the sorting algorithms from this library in your project you just need to `import` the class for the sorting algorithm you wish to use from the `dev.jeffreybender.sort` package.
 
@@ -27,10 +27,10 @@ Sorts an array of objects in the order determined by `comparator`.
 
 Sorts an array of objects whose class (or a `super` class of it) implements [`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html "`Comparable`") in the order determined by the implemented [`compareTo(T o)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T- "`compareTo(T o)`") method.
 
-####Other
+#### Other
 Other functionality like the ability to test if an array is sorted can be found in [`dev.jeffreybender.sort.SortUtils.java`](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/SortUtils.java "`dev.jeffreybender.sort.SortUtils.java`").
 
 ------------
 
-###Currently implemented sorting algorithms
+### Currently implemented sorting algorithms
 - [Bubble Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/BubbleSort.java "Bubble Sort")
