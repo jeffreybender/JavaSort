@@ -17,7 +17,9 @@ To use any of the sorting algorithms from this library in your project you just 
 
 All of the sort classes have 2 `public` methods:
 
-1- `public static <T> void sort(T[] array, Comparator<? super T> comparator)`
+1- ```java
+public static <T> void sort(T[] array, Comparator<? super T> comparator)
+```
 
 Sorts an array of objects in the order determined by `comparator`.
 - If `comparator` is `null` the method will try to sort `array` according to the implemented [`compareTo(T o)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T- "`compareTo(T o)`") method for the class of its objects.
