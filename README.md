@@ -1,11 +1,11 @@
 # JavaSort
 A class library of sorting algorithms written in Java.
 
-This is a [Maven](https://maven.apache.org/ "Maven") project.
-
 The sorting methods in this library all use generic array parameters which means arrays of any class can be sorted.
 
 The sorting algorithms can all be found in: [/src/main/java/dev/jeffreybender/sort/](https://github.com/jeffreybender/JavaSort/tree/master/src/main/java/dev/jeffreybender/sort "/src/main/java/dev/jeffreybender/sort/")
+
+This is a [Maven](https://maven.apache.org/ "Maven") project.
 
 ------------
 
