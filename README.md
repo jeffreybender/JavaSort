@@ -3,7 +3,7 @@ A class library of sorting algorithms written in Java.
 
 The sorting methods in this library all use generic array parameters which means arrays of any class can be sorted.
 
-The sorting algorithms can all be found in: [`dev.jeffreybender.sort`](https://github.com/jeffreybender/JavaSort/tree/master/src/main/java/dev/jeffreybender/sort "`dev.jeffreybender.sort`")
+The sorting algorithms can all be found in the [`dev.jeffreybender.sort`](https://github.com/jeffreybender/JavaSort/tree/master/src/main/java/dev/jeffreybender/sort "`dev.jeffreybender.sort`") package.
 
 This is a [Maven](https://maven.apache.org/ "Maven") project.
 
@@ -13,7 +13,7 @@ This is a [Maven](https://maven.apache.org/ "Maven") project.
 
 #### Sorting
 
-To use any of the sorting algorithms from this library in your project you just need to `import` the class for the sorting algorithm you wish to use from the `dev.jeffreybender.sort` package and use one of the two methods listed below.
+To use any of the sorting algorithms from this library in your project you just need to `import` the class for the sorting algorithm you wish to use from the [`dev.jeffreybender.sort`](https://github.com/jeffreybender/JavaSort/tree/master/src/main/java/dev/jeffreybender/sort "`dev.jeffreybender.sort`") package and use one of the two methods listed below.
 
 All of the sort classes have 2 `public` methods:
 
