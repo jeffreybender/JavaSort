@@ -72,10 +72,26 @@ public final class SortUtils {
         return isSorted(array, null);
     }
 
+    /**
+     * Returns a Comparator that utilizes {@link java.lang.Comparable#compareTo(T)}
+     * 
+     * @param <T> Generic type the comparator can be used on
+     * @return a Comparator that utilizes {@link java.lang.Comparable#compareTo(T)}
+     * @throws ClassCastException if the class for {@code <T>} does not implement
+     *                            {@link java.lang.Comparable}
+     */
     public static <T> Comparator<T> getDefaultComparator() {
         return (o1, o2) -> ((Comparable) o1).compareTo(o2);
     }
 
+    /**
+     * Swaps the positions of 2 elements in an array
+     * 
+     * @param <T>    the generic type of the objects in the array
+     * @param array  the array whose elements are being swapped
+     * @param index1 the index of the first element being swapped
+     * @param index2 the index of the second element being swapped
+     */
     public static <T> void swap(T[] array, int index1, int index2) {
         T temp = array[index1];
         array[index1] = array[index2];

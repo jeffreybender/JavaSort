@@ -30,15 +30,10 @@ public class SortTests {
     private Method sortWithoutComparatorMethod;
     private Method sortWithComparatorMethod;
 
-    private static final Class<?>[] sortWithComparatorMethodParameters = new Class[] {
-        Object[].class,
-        Comparator.class
-    };
+    private static final Class<?>[] sortWithComparatorMethodParameters = new Class[] { Object[].class,
+            Comparator.class };
 
-    private static final Class<?>[] sortWithOutComparatorMethodParameters = new Class[] {
-        Comparable[].class
-    };
-
+    private static final Class<?>[] sortWithOutComparatorMethodParameters = new Class[] { Comparable[].class };
 
     public SortTests() {
         stringLengthCompare = Comparator.comparing(String::length);
@@ -73,7 +68,7 @@ public class SortTests {
     public void simpleParameterizedTest(Class<?> sortClass) {
         try {
             sortWithoutComparatorMethod = getSortWithOutComparatorMethod(sortClass);
-            sortWithoutComparatorMethod.invoke(null, new Object[]{comparableArray});
+            sortWithoutComparatorMethod.invoke(null, new Object[] { comparableArray });
             assertTrue(SortUtils.isSorted(comparableArray));
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -82,9 +77,7 @@ public class SortTests {
     }
 
     private static Class<?>[] sortClasses() {
-        return new Class<?>[] {
-            BubbleSort.class
-        };
+        return new Class<?>[] { BubbleSort.class };
     }
 
     private Method getSortWithComparatorMethod(Class<?> sortClass) throws NoSuchMethodException {

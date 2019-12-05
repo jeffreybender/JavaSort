@@ -31,26 +31,26 @@ public final class BubbleSort {
      *                            {@link java.lang.Comparable}.
      */
     public static <T> void sort(T[] array, Comparator<? super T> comparator) {
-        if(array.length <= 1) {
+        if (array.length <= 1) {
             return;
         }
-        if(comparator == null) {
+        if (comparator == null) {
             comparator = SortUtils.getDefaultComparator();
         }
         boolean didSwap;
         int endIndex = array.length;
         do {
             didSwap = false;
-            for(int i = 1; i < endIndex; i++) {
+            for (int i = 1; i < endIndex; i++) {
                 T o1 = array[i - 1];
                 T o2 = array[i];
-                if(comparator.compare(o1, o2) > 0) {
+                if (comparator.compare(o1, o2) > 0) {
                     SortUtils.swap(array, i - 1, i);
                     didSwap = true;
                 }
             }
             endIndex--;
-        } while(didSwap);
+        } while (didSwap);
     }
 
     /**
