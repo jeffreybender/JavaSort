@@ -1,15 +1,20 @@
 package dev.jeffreybender;
 
-import dev.jeffreybender.sample.IncomparableClass;
-import dev.jeffreybender.sort.SortUtils;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.Arrays;
 import java.util.Comparator;
-import org.junit.jupiter.api.AfterEach;
+
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import dev.jeffreybender.sample.IncomparableClass;
+import dev.jeffreybender.sort.SortUtils;
 
 /**
  *
@@ -20,12 +25,12 @@ public class SortUtilsTests {
     private String[] comparableArray;
     private IncomparableClass[] incomparableArray;
     private final Comparator<String> stringLengthCompare;
-    private final Comparator<IncomparableClass> incomperableClassCompare;
+    private final Comparator<IncomparableClass> incomparableClassCompare;
     private final Comparator<String> allowNull;
 
     public SortUtilsTests() {
         stringLengthCompare = Comparator.comparing(String::length);
-        incomperableClassCompare = Comparator.comparing(IncomparableClass::getRank);
+        incomparableClassCompare = Comparator.comparing(IncomparableClass::getRank);
         allowNull = (s1, s2) -> 0;
     }
 
@@ -52,27 +57,27 @@ public class SortUtilsTests {
     }
 
     @Test
-    public void isSortedEmptyList() {
+    public void isSortedEmptyArray() {
         String[] emptyString = new String[] {};
-        IncomparableClass[] emptyIncomperable = new IncomparableClass[] {};
+        IncomparableClass[] emptyIncomparable = new IncomparableClass[] {};
         assertTrue(SortUtils.isSorted(emptyString, null));
         assertTrue(SortUtils.isSorted(emptyString, stringLengthCompare));
-        assertTrue(SortUtils.isSorted(emptyIncomperable, null));
-        assertTrue(SortUtils.isSorted(emptyIncomperable, incomperableClassCompare));
+        assertTrue(SortUtils.isSorted(emptyIncomparable, null));
+        assertTrue(SortUtils.isSorted(emptyIncomparable, incomparableClassCompare));
     }
 
     @Test
-    public void isSortedSingleElementList() {
+    public void isSortedSingleElementArray() {
         String[] singleString = new String[] { "Hello World!" };
-        IncomparableClass[] singleIncomperable = new IncomparableClass[] { new IncomparableClass(0) };
+        IncomparableClass[] singleIncomparable = new IncomparableClass[] { new IncomparableClass(0) };
         assertTrue(SortUtils.isSorted(singleString, null));
         assertTrue(SortUtils.isSorted(singleString, stringLengthCompare));
-        assertTrue(SortUtils.isSorted(singleIncomperable, null));
-        assertTrue(SortUtils.isSorted(singleIncomperable, incomperableClassCompare));
+        assertTrue(SortUtils.isSorted(singleIncomparable, null));
+        assertTrue(SortUtils.isSorted(singleIncomparable, incomparableClassCompare));
     }
 
     @Test
-    public void isSortedOnUnsortedComperableTest() {
+    public void isSortedOnUnsortedComparableTest() {
         assertFalse(SortUtils.isSorted(comparableArray, null));
     }
 
@@ -82,7 +87,7 @@ public class SortUtilsTests {
     }
 
     @Test
-    public void isSortedOnSortedComperableTest() {
+    public void isSortedOnSortedComparableTest() {
         Arrays.sort(comparableArray);
         assertTrue(SortUtils.isSorted(comparableArray, null));
     }
