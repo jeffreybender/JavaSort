@@ -25,7 +25,7 @@ import dev.jeffreybender.sort.SortUtils;
  *
  * @author jbender
  */
-public class SortTests {
+public class SortTest {
 
     private String[] comparableArray;
     private IncomparableClass[] incomparableArray;
@@ -40,7 +40,7 @@ public class SortTests {
 
     private static final Class<?>[] sortWithOutComparatorMethodParameters = new Class[] { Comparable[].class };
 
-    public SortTests() {
+    public SortTest() {
         stringLengthCompare = Comparator.comparing(String::length);
         incomparableClassCompare = Comparator.comparing(IncomparableClass::getRank);
     }

@@ -20,7 +20,7 @@ import dev.jeffreybender.sort.SortUtils;
  *
  * @author jbender
  */
-public class SortUtilsTests {
+public class SortUtilsTest {
 
     private String[] comparableArray;
     private IncomparableClass[] incomparableArray;
@@ -28,7 +28,7 @@ public class SortUtilsTests {
     private final Comparator<IncomparableClass> incomparableClassCompare;
     private final Comparator<String> allowNull;
 
-    public SortUtilsTests() {
+    public SortUtilsTest() {
         stringLengthCompare = Comparator.comparing(String::length);
         incomparableClassCompare = Comparator.comparing(IncomparableClass::getRank);
         allowNull = (s1, s2) -> 0;
