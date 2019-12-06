@@ -47,4 +47,5 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 ------------
 
 #### Author
+<img src="https://jeffreybender.github.io/resources/images/logo.svg" width="60" />
 Jeffrey Bender
