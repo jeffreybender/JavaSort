@@ -1,5 +1,6 @@
 # JavaSort
 [![Build Status](https://travis-ci.com/jeffreybender/JavaSort.svg?branch=master)](https://travis-ci.com/jeffreybender/JavaSort)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A class library of sorting algorithms written in Java.
 
