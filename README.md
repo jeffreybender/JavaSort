@@ -41,7 +41,7 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 
 ------------
 
-###License
+### License
 [MIT License](https://github.com/jeffreybender/JavaSort/blob/master/LICENSE "MIT License")
 
 ------------
