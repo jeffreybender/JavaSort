@@ -33,6 +33,7 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 ------------
 
 ### Currently implemented sorting algorithms
+- Selection Sort
 - [Bubble Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/BubbleSort.java "Bubble Sort")
 
 *More on the way*

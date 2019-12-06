@@ -18,6 +18,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import dev.jeffreybender.sample.IncomparableClass;
 import dev.jeffreybender.sort.BubbleSort;
+import dev.jeffreybender.sort.SelectionSort;
 import dev.jeffreybender.sort.SortUtils;
 
 /**
@@ -187,7 +188,7 @@ public class SortTests {
     }
 
     private static Class<?>[] sortClasses() {
-        return new Class<?>[] { BubbleSort.class };
+        return new Class<?>[] { SelectionSort.class, BubbleSort.class };
     }
 
     private Method getSortWithComparatorMethod(Class<?> sortClass) throws NoSuchMethodException {
