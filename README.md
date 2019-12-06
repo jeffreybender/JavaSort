@@ -20,7 +20,7 @@ All of the sort classes have 2 `public` methods:
 1- `public static <T> void sort(T[] array, Comparator<? super T> comparator)`
 
 Sorts an array of objects in the order determined by `comparator`.
-- If `comparator` is `null` the method will try to sort `array` in the order deterimined by the implemented [`compareTo(T o)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T- "`compareTo(T o)`") method for the class of its objects.
+- If `comparator` is `null`, the method will try to sort `array` in the order deterimined by the implemented [`compareTo(T o)`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T- "`compareTo(T o)`") method for the class of its objects.
 - If the `array.length` is greater than `1`, `comparator` is `null`, and the class for the objects in `array` (or a `super` class of it) does not implement [`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html "`Comparable`") a [`ClassCastException`](https://docs.oracle.com/javase/8/docs/api/java/lang/ClassCastException.html "`ClassCastException`") will be thrown.
 
 2- `public static <T extends Comparable<? super T>> void sort(T[] array)`
