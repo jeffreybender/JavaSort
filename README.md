@@ -5,11 +5,12 @@ The sorting methods in this library all use generic array parameters which means
 
 The sorting algorithms can all be found in the [`dev.jeffreybender.sort`](https://github.com/jeffreybender/JavaSort/tree/master/src/main/java/dev/jeffreybender/sort "`dev.jeffreybender.sort`") package.
 
-This is a [Maven](https://maven.apache.org/ "Maven") project.
-
 ------------
 
 ### How to use this library
+
+#### Building
+This is a [Maven](https://maven.apache.org/ "Maven") project.
 
 #### Sorting
 
@@ -37,3 +38,8 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 - [Bubble Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/BubbleSort.java "Bubble Sort")
 
 *More on the way*
+
+------------
+
+###License
+[MIT License](https://github.com/jeffreybender/JavaSort/blob/master/LICENSE "MIT License")
