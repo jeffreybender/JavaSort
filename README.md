@@ -1,4 +1,5 @@
 # JavaSort
+<img src="https://jeffreybender.github.io/resources/images/logo.svg" align="right" style="height: 100px; width: 100px;" />
 A class library of sorting algorithms written in Java.
 
 The sorting methods in this library all use generic array parameters which means arrays of any class can be sorted.
