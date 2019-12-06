@@ -1,5 +1,6 @@
 # JavaSort
 [![Build Status](https://travis-ci.com/jeffreybender/JavaSort.svg?branch=master)](https://travis-ci.com/jeffreybender/JavaSort)
+
 A class library of sorting algorithms written in Java.
 
 The sorting methods in this library all use generic array parameters which means arrays of any class can be sorted.
