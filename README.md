@@ -1,4 +1,4 @@
-# JavaSort <img src="https://jeffreybender.github.io/resources/images/logo.svg" align="right" width="100" />
+# JavaSort <img src="https://jeffreybender.github.io/resources/images/logo.svg" align="right" width="60" />
 
 A class library of sorting algorithms written in Java.
 
