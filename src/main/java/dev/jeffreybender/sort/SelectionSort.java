@@ -3,7 +3,7 @@ package dev.jeffreybender.sort;
 import java.util.Comparator;
 
 /**
- * Utility class for sorting arrays with various algorithm options. This class
+ * Utility class for sorting arrays using the Selection Sort algorithm. This class
  * cannot be instantiated.
  * 
  * @author jbender
