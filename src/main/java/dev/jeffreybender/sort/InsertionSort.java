@@ -38,13 +38,10 @@ public final class InsertionSort {
             comparator = SortUtils.getDefaultComparator();
         }
         for (int index = 1; index < array.length; index++) {
-            T objectAtIndex = array[index];
-            int compareToIndex = index - 1;
-            while (compareToIndex >= 0 && comparator.compare(array[compareToIndex], objectAtIndex) > 0) {
-                array[compareToIndex + 1] = array[compareToIndex];
-                compareToIndex--;
+            for (int checkIndex = index - 1; checkIndex >= 0
+                    && comparator.compare(array[checkIndex], array[checkIndex + 1]) > 0; checkIndex--) {
+                SortUtils.swap(array, checkIndex, checkIndex + 1);
             }
-            array[compareToIndex + 1] = objectAtIndex;
         }
     }
 
