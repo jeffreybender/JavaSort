@@ -18,6 +18,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import dev.jeffreybender.sample.IncomparableClass;
 import dev.jeffreybender.sort.BubbleSort;
+import dev.jeffreybender.sort.InsertionSort;
 import dev.jeffreybender.sort.SelectionSort;
 import dev.jeffreybender.sort.SortUtils;
 
@@ -59,11 +60,11 @@ public class SortTest {
         sortWithComparatorMethod = null;
         sortWithoutComparatorMethod = null;
         comparableArray = new String[] { "WE", "HOLD", "THESE", "TRUTHS", "TO", "BE", "SELF", "EVIDENT", "THAT", "ALL",
-                "MEN", "ARE", "CREATED", "EQUAL" };
+                "MEN", "ARE", "CREATED", "EQUAL", "ZLAST" };
         incomparableArray = new IncomparableClass[] { new IncomparableClass(2), new IncomparableClass(0),
                 new IncomparableClass(2), new IncomparableClass(4), new IncomparableClass(5), new IncomparableClass(6),
-                new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1),
-                new IncomparableClass(1) };
+                new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1),
+                new IncomparableClass(9) };
     }
 
     @AfterEach
@@ -188,7 +189,7 @@ public class SortTest {
     }
 
     private static Class<?>[] sortClasses() {
-        return new Class<?>[] { SelectionSort.class, BubbleSort.class };
+        return new Class<?>[] { BubbleSort.class, SelectionSort.class, InsertionSort.class };
     }
 
     private Method getSortWithComparatorMethod(Class<?> sortClass) throws NoSuchMethodException {
