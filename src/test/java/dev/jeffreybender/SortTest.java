@@ -59,12 +59,12 @@ public class SortTest {
     public void setUp() throws Exception {
         sortWithComparatorMethod = null;
         sortWithoutComparatorMethod = null;
-        comparableArray = new String[] { "WE", "HOLD", "THESE", "TRUTHS", "TO", "BE", "SELF", "EVIDENT", "THAT", "ALL",
-                "MEN", "ARE", "CREATED", "EQUAL", "ZLAST" };
-        incomparableArray = new IncomparableClass[] { new IncomparableClass(2), new IncomparableClass(0),
-                new IncomparableClass(2), new IncomparableClass(4), new IncomparableClass(5), new IncomparableClass(6),
-                new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1),
-                new IncomparableClass(9) };
+        comparableArray = new String[] { "ZLAST000000000", "WE", "HOLD", "THESE", "TRUTHS", "TO", "BE", "SELF",
+                "EVIDENT", "THAT", "ALL", "MEN", "ARE", "CREATED", "EQUAL", "0" };
+        incomparableArray = new IncomparableClass[] { new IncomparableClass(9), new IncomparableClass(2),
+                new IncomparableClass(0), new IncomparableClass(2), new IncomparableClass(4), new IncomparableClass(5),
+                new IncomparableClass(6), new IncomparableClass(1), new IncomparableClass(1), new IncomparableClass(1),
+                new IncomparableClass(1), new IncomparableClass(0) };
     }
 
     @AfterEach
