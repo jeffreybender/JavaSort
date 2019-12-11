@@ -55,7 +55,7 @@ public final class MergeSort {
     }
 
     private static <T> void mergeSort(T[] array, int endIndex, Comparator<T> comparator) {
-        if (endIndex <= 1) {
+        if (array.length <= 1) {
             return;
         }
         int middleIndex = endIndex / 2;
