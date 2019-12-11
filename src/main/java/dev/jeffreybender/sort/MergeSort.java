@@ -1,5 +1,6 @@
 package dev.jeffreybender.sort;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 /**
@@ -37,6 +38,7 @@ public final class MergeSort {
         if (comparator == null) {
             comparator = SortUtils.getDefaultComparator();
         }
+        mergeSort(array, array.length, comparator);
     }
 
     /**
@@ -50,5 +52,39 @@ public final class MergeSort {
      */
     public static <T extends Comparable<? super T>> void sort(T[] array) {
         sort(array, null);
+    }
+
+    private static <T> void mergeSort(T[] array, int endIndex, Comparator<T> comparator) {
+        if (endIndex <= 1) {
+            return;
+        }
+        int middleIndex = endIndex / 2;
+        T[] left = Arrays.copyOfRange(array, 0, middleIndex);
+        T[] right = Arrays.copyOfRange(array, middleIndex, endIndex);
+        int leftStop = middleIndex;
+        int rightStop = endIndex - middleIndex;
+        mergeSort(left, middleIndex, comparator);
+        mergeSort(right, endIndex - middleIndex, comparator);
+        merge(array, left, leftStop, right, rightStop, comparator);
+    }
+
+    private static <T> void merge(T[] array, T[] left, int leftStop, T[] right, int rightStop,
+            Comparator<T> comparator) {
+        int leftIndex = 0;
+        int rightIndex = 0;
+        int arrayIndex = 0;
+        while (leftIndex < leftStop && rightIndex < rightStop) {
+            if (comparator.compare(left[leftIndex], right[rightIndex]) <= 0) {
+                array[arrayIndex++] = left[leftIndex++];
+            } else {
+                array[arrayIndex++] = right[rightIndex++];
+            }
+        }
+        while (leftIndex < leftStop) {
+            array[arrayIndex++] = left[leftIndex++];
+        }
+        while (rightIndex < rightStop) {
+            array[arrayIndex++] = right[rightIndex++];
+        }
     }
 }
