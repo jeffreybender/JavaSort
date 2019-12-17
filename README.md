@@ -37,10 +37,11 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 ------------
 
 ### Currently implemented sorting algorithms
-- [Selection Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/SelectionSort.java "Selection Sort")
 - [Bubble Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/BubbleSort.java "Bubble Sort")
 - [Insertion Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/InsertionSort.java "Insertion Sort")
 - [Merge Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/MergeSort.java "Merge Sort")
+- [Quick Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/QuickSort.java "Quick Sort")
+- [Selection Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/SelectionSort.java "Selection Sort")
 
 *More on the way*
 
