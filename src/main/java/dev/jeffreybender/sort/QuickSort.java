@@ -72,11 +72,10 @@ public final class QuickSort {
             do {
                 right--;
             } while (comparator.compare(array[right], pivot) > 0);
-            if (left >= right) {
-                return right;
+            if (left < right) {
+                SortUtils.swap(array, left, right);
             }
-            SortUtils.swap(array, left, right);
         }
-        return 0;
+        return right;
     }
 }
