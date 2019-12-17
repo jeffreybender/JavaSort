@@ -20,6 +20,7 @@ import dev.jeffreybender.sample.IncomparableClass;
 import dev.jeffreybender.sort.BubbleSort;
 import dev.jeffreybender.sort.InsertionSort;
 import dev.jeffreybender.sort.MergeSort;
+import dev.jeffreybender.sort.QuickSort;
 import dev.jeffreybender.sort.SelectionSort;
 import dev.jeffreybender.sort.SortUtils;
 
@@ -190,7 +191,7 @@ public class SortTest {
     }
 
     private static Class<?>[] sortClasses() {
-        return new Class<?>[] { BubbleSort.class, SelectionSort.class, InsertionSort.class, MergeSort.class };
+        return new Class<?>[] { BubbleSort.class, SelectionSort.class, InsertionSort.class, MergeSort.class, QuickSort.class };
     }
 
     private Method getSortWithComparatorMethod(Class<?> sortClass) throws NoSuchMethodException {
