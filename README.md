@@ -43,8 +43,6 @@ Other functionality, like the ability to test if an array is sorted, can be foun
 - [Quick Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/QuickSort.java "Quick Sort")
 - [Selection Sort](https://github.com/jeffreybender/JavaSort/blob/master/src/main/java/dev/jeffreybender/sort/SelectionSort.java "Selection Sort")
 
-*More on the way*
-
 ------------
 
 ### License
